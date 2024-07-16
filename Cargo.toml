@@ -1,0 +1,28 @@
+[package]
+name = "Find_Public_key"
+version = "0.0.3"
+edition = "2021"
+
+[dependencies]
+hex = "0.4.3"
+sha2 = "0.10.8"
+
+#цветной вывод в консоль
+console = "0.15.7"
+
+base58 ="0.2.0"
+sv ="0.2.2"
+
+rustils="0.1.23"
+
+num_cpus = "1.16.0"
+tokio = { version = "1.36.0", features = ["rt", "rt-multi-thread", "macros"] }
+rand = "0.8.5"
+
+#это нужно для иконки(в конец dependencies иначе будут глюки)
+[target.'cfg(windows)'.build-dependencies]
+winres = "0.1.12"
+
+#Минимизирует размер кода
+[profile.release]
+opt-level = 3
